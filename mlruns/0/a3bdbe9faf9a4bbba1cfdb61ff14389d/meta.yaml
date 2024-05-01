@@ -1,0 +1,15 @@
+artifact_uri: file:///home/andro/Dev/Chest_Cancer_Classification_Using_MLFLOW_DVC/mlruns/0/a3bdbe9faf9a4bbba1cfdb61ff14389d/artifacts
+end_time: 1714562174373
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a3bdbe9faf9a4bbba1cfdb61ff14389d
+run_name: bouncy-ram-667
+run_uuid: a3bdbe9faf9a4bbba1cfdb61ff14389d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1714562167908
+status: 3
+tags: []
+user_id: andro

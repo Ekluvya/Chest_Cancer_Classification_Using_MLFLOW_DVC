@@ -35,3 +35,66 @@
 [2024-05-01 15:34:06,431: INFO: common: created directory at: artifacts/prepare_base_model]
 [2024-05-01 15:34:07,498: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
 [2024-05-01 15:34:07,887: INFO: main: >>>>>> Stage Prepare Base Model Stage completed <<<<<<]
+[2024-05-01 15:36:51,704: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-05-01 15:37:47,579: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:37:47,581: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:37:47,582: INFO: common: created directory at: artifacts]
+[2024-05-01 15:37:47,583: INFO: common: created directory at: artifacts/training]
+[2024-05-01 15:51:57,953: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-05-01 15:51:58,264: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2024-05-01 15:51:58,266: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:51:58,267: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:51:58,267: INFO: common: created directory at: artifacts]
+[2024-05-01 15:51:58,267: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-01 15:51:58,268: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 15:52:02,798: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 15:52:03,261: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<]
+[2024-05-01 15:52:03,261: INFO: main: >>>>>> Stage Prepare Base Model Stage started <<<<<<]
+[2024-05-01 15:52:03,265: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:52:03,266: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:52:03,266: INFO: common: created directory at: artifacts]
+[2024-05-01 15:52:03,266: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-05-01 15:52:04,430: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-05-01 15:52:04,951: INFO: main: >>>>>> Stage Prepare Base Model Stage completed <<<<<<]
+[2024-05-01 15:52:04,951: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2024-05-01 15:52:04,955: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:52:04,959: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:52:04,960: INFO: common: created directory at: artifacts]
+[2024-05-01 15:52:04,961: INFO: common: created directory at: artifacts/training]
+[2024-05-01 15:52:15,177: ERROR: main: {{function_node __wrapped__AddV2_device_/job:localhost/replica:0/task:0/device:GPU:0}} failed to allocate memory [Op:AddV2]]
+Traceback (most recent call last):
+  File "/home/andro/Dev/Chest_Cancer_Classification_Using_MLFLOW_DVC/main.py", line 36, in <module>
+    obj.main()
+  File "/home/andro/Dev/Chest_Cancer_Classification_Using_MLFLOW_DVC/src/cnnClassifier/pipeline/stage_03_model_trainer.py", line 19, in main
+    training.get_base_model()
+  File "/home/andro/Dev/Chest_Cancer_Classification_Using_MLFLOW_DVC/src/cnnClassifier/components/model_trainer.py", line 15, in get_base_model
+    self.model = tf.keras.models.load_model(
+  File "/home/andro/miniconda3/envs/cancer/lib/python3.10/site-packages/keras/saving/saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "/home/andro/miniconda3/envs/cancer/lib/python3.10/site-packages/keras/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/andro/miniconda3/envs/cancer/lib/python3.10/site-packages/keras/backend.py", line 2101, in random_uniform
+    return tf.random.stateless_uniform(
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: {{function_node __wrapped__AddV2_device_/job:localhost/replica:0/task:0/device:GPU:0}} failed to allocate memory [Op:AddV2]
+[2024-05-01 15:54:36,201: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-05-01 15:54:36,396: INFO: main: >>>>>> Stage Data Ingestion Stage started <<<<<<]
+[2024-05-01 15:54:36,398: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:54:36,399: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:54:36,399: INFO: common: created directory at: artifacts]
+[2024-05-01 15:54:36,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-01 15:54:36,399: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 15:54:43,489: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-05-01 15:54:43,831: INFO: main: >>>>>> Stage Data Ingestion Stage completed <<<<<<]
+[2024-05-01 15:54:43,831: INFO: main: >>>>>> Stage Prepare Base Model Stage started <<<<<<]
+[2024-05-01 15:54:43,833: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:54:43,835: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:54:43,835: INFO: common: created directory at: artifacts]
+[2024-05-01 15:54:43,835: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-05-01 15:54:45,980: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-05-01 15:54:46,527: INFO: main: >>>>>> Stage Prepare Base Model Stage completed <<<<<<]
+[2024-05-01 15:54:46,527: INFO: main: >>>>>> Stage Model Training Stage started <<<<<<]
+[2024-05-01 15:54:46,529: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-05-01 15:54:46,530: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-01 15:54:46,530: INFO: common: created directory at: artifacts]
+[2024-05-01 15:54:46,530: INFO: common: created directory at: artifacts/training]
+[2024-05-01 15:54:58,097: INFO: main: >>>>>> Stage Model Training Stage completed <<<<<<]
